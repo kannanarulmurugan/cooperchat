@@ -1,6 +1,7 @@
 {
   "name": "cooperchat",
   "scripts": {
+    "start": "node sample1.js"
   },
   "env": {
   },
