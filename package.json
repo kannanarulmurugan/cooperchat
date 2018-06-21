@@ -1,0 +1,11 @@
+{
+    "name": "my-proyect",
+    "version": "0.0.1",
+    "description": "A web app that does not get killed by high memory consumption in Heroku.",
+    "main": "server/bin/web.js",
+    "repository": "https://github.com/kannanarulmurugan/cooperchat.git",
+    "scripts": {
+        "test": "grunt test",
+        "start": "heroku-node-settings sample1.js"
+    }
+}
