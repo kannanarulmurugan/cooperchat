@@ -5,7 +5,7 @@
     "main": "server/bin/web.js",
     "repository": "https://github.com/kannanarulmurugan/cooperchat.git",
     "scripts": {
-        "test": "grunt test",
+
         "start": "node sample1.js"
     }
 }
