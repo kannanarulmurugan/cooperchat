@@ -22,6 +22,7 @@ function handler(req, res) {
             res.end(data);
         });
 }
+io.set('transports', ['websocket']);
 
 io.sockets.on('connection', function(socket) {
     console.log('connection created');
