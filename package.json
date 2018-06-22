@@ -7,5 +7,6 @@
     "scripts": {
 
         "start": "node sample1.js"
-    }
+    },
+    "dependencies": { "socket.io": "*" }
 }
