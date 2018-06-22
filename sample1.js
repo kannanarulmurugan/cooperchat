@@ -56,6 +56,7 @@ io.sockets.on('connection', function(socket) {
                 break;
             }
         }
+        io.sockets.emit('get-userlist', clients);
     })
 
 });
