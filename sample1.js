@@ -24,18 +24,30 @@ function handler(req, res) {
 }
 
 io.sockets.on('connection', function(socket) {
-
+    console.log('connection created');
     socket.on('add-user', function(data) {
+
+        console.log('User created   ' + data.username);
+
+        var arrstr = Object.getOwnPropertyNames(clients);
+
+        var i = 1;
+        arrstr.forEach(function(element) {
+            i++;
+        });
+
+        console.log('user count****    ' + i);
+
+
         clients[data.username] = {
             "socket": socket.id
         };
+
     });
 
     socket.on('get-user', function(data) {
-
         // io.sockets.connected[clients[data.username].socket].emit("get-userlist", clients);
         io.sockets.emit('get-userlist', clients);
-
     });
 
     socket.on('private-message', function(data) {
@@ -44,6 +56,14 @@ io.sockets.on('connection', function(socket) {
             io.sockets.connected[clients[data.username].socket].emit("add-message", data);
         } else {
             console.log("User does not exist: " + data.username);
+
+            var arrstr = Object.getOwnPropertyNames(clients);
+
+            var i = 1;
+            arrstr.forEach(function(element) {
+                console.log("user " + i + "  " + element);
+                i++;
+            });
         }
     });
 
