@@ -43,8 +43,10 @@
             console.log(this.innerText);
             user_name = this.innerText;
         });
+        // var socket = io.connect('https://chatappcooper.herokuapp.com/', {
+        //     transport: ['websocket']
+        // });
         var socket = io.connect('https://chatappcooper.herokuapp.com/');
-        //var socket = io.connect('192.168.1.81:3005');
 
         // Add a username
         $(".username-form").on("submit", function() {

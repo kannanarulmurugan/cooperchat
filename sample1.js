@@ -43,7 +43,7 @@ io.sockets.on('connection', function(socket) {
         clients[data.username] = {
             "socket": socket.id
         };
-
+        io.sockets.emit('get-userlist', clients);
     });
 
     socket.on('get-user', function(data) {
